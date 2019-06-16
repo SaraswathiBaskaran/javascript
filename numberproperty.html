@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Number Methods</h2>
+
+<p>The toString() method converts a number to a string.</p>
+
+<p id="demo"></p>
+<p>The toExponential() method returns a string, with the number rounded and written using exponential notation.</p>
+
+<p>An optional parameter defines the number of digits behind the decimal point.</p>
+
+<p id="exponent"></p>
+
+<p>The toFixed() method rounds a number to a given number of digits.</p>
+<p>For working with money, toFixed(2) is perfect.</p>
+
+<p id="fixed"></p>
+<script>
+var x = 123;
+document.getElementById("demo").innerHTML =
+  x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+   
+   var y = 9.656;
+document.getElementById("exponent").innerHTML =
+  y.toExponential() + "<br>" + 
+  y.toExponential(2) + "<br>" + 
+  y.toExponential(4) + "<br>" + 
+  y.toExponential(6);
+  
+  
+  var z = 9.656;
+document.getElementById("fixed").innerHTML =
+  z.toFixed(0) + "<br>" +
+  z.toFixed(2) + "<br>" +
+  z.toFixed(4) + "<br>" +
+  z.toFixed(6);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<script type="text/javascript">
+function validate()
+{
+var username=document.getElementById("user");
+var password=document.getElementById("pass");
+if(username.value.trim()=="" || password.value.trim=="")
+{
+
+username.style.border="solid 3px red";
+document.getElementById("labeluser").style.visibility="visible";
+password.style.border="solid 3px red";
+document.getElementById("labelpass").style.visibility="visible";
+return false;
+}
+else if(username.value=="deepak" && password.value=="deepak")
+{
+alert("Welcome"+user);
+
+return true;
+
+}
+else
+{
+return false;
+}
+
+}
+
+
+</script>
+
+<form onsubmit="return validate()" action="welcome.html">
+<input id="user" placeholder="enter username" >
+<label id="labeluser" style="color:red; visibility:hidden"> Invalid Credentials</label>
+<br>
+<input id="pass" type =password placeholder="enter password">
+<label id="labelpass" style="color:red; visibility:hidden"> Invalid Credentials</label>
+<br>
+<button type="submit"> submit </button>
+
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welocme to Regular Expression</title>
+    </head>
+<body>
+    Validating Regular Expression:
+    <br>
+    Enter the Userid:
+<script>
+/*
+    \d=match any digit (equal to[0-9])
+    \w-match any word character(a-z,A-Z,0-9)
+    \s-match whitespace char
+    \t-match a tab only
+  */  function validateReg()
+    {
+        var uid=document.getElementById("userid").value;
+        var reg=/[UE]-/i;
+        if(reg.test(uid))
+        {
+            document.getElementById("labeluid").style.visibility="visible";
+        document.getElementById("labeluid").innerHTML="Valid UserId";
+        
+        document.getElementById("labeluid").style.color="green";   
+           
+        }
+        else
+        {
+            alert("InValid User id");
+            document.getElementById("labeluid").style.visibility="visible";
+        }
+
+     var mno=document.getElementById("mobilenumber").value;
+     var mexp=/[7-9]\d{9}/
+     if(mexp.test(mno))
+     {
+        document.getElementById("labelmno").style.visibility="visible";
+        document.getElementById("labelmno").innerHTML="Valid Mobile";
+        
+        document.getElementById("labelmno").style.color="green";
+
+     }
+     else
+     {
+        document.getElementById("labelmno").style.visibility="visible";
+     }
+     var email=document.getElementById("email").value;
+     var eexp=/^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+     if(eexp.test(email))
+     {
+        document.getElementById("labele").style.visibility="visible";
+        document.getElementById("labele").innerHTML="Valid Email";
+        
+        document.getElementById("labele").style.color="green";
+
+     }
+     else
+     {
+        document.getElementById("labele").style.visibility="visible";
+     }
+    }
+
+</script>
+<input id="userid"  placeholder="userid-eg:U-1">
+<label id="labeluid" style="color:red; visibility:hidden"> Invalid UserId</label>
+<br>
+<br>
+<input id="mobilenumber"  placeholder="phone number">
+<label id="labelmno" style="color:red; visibility:hidden"> Invalid MobileNumber</label>
+<br>
+<input id="email"  placeholder="email">
+<label id="labele" style="color:red; visibility:hidden"> Invalid Email</label>
+<br>
+<br>
+<button type="button" onclick="validateReg()" > submit </button>
+
+</body>
+</html>
