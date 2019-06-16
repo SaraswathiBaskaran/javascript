@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Properties</h2>
+
+<p>The length property returns the length of a string:</p>
+
+<p id="demo"></p>
+
+<p>The lastIndexOf() method returns the position of the last occurrence of a specified text:</p>
+<p id="demo1"></p>
+<p>Both indexOf(), and lastIndexOf() return -1 if the text is not found:</p>
+<p id="demo2"></p>
+<p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+<p id="demo3"></p>
+
+<p>The lastIndexOf() method accepts a second parameter as the starting position for the search.</p>
+<p>Remember that the lastIndexOf() method searches backwards, so position 30 means start the search at position 30, and search to the beginning.</p>
+<p>Position 30 is position 30 from the beginning.</p>
+
+<p id="demo4"></p>
+
+<p>The search() method returns the position of the first occurrence of a specified text in a string:</p>
+
+<p id="demo5"></p>
+
+
+<script type="text/javascript">
+var txt = "welcome to java";
+document.getElementById("demo").innerHTML = txt.length;
+
+
+
+var str = "Please locate where 'locate' occurs!";
+document.write(str);
+var pos = str.lastIndexOf("occurs");
+document.getElementById("demo1").innerHTML = pos;
+document.write("last index of occurs"+pos);
+
+var po = str.indexOf("John");
+document.getElementById("demo2").innerHTML = po;
+
+
+var p = str.indexOf("locate");
+document.getElementById("demo3").innerHTML = p;
+
+
+var string = "JavaScript is the programming language of HTML and the Web JavaScript is easy to learn";
+var position = string.lastIndexOf("is",30);
+document.getElementById("demo4").innerHTML = position;
+
+
+var search = str.search("locate");
+document.getElementById("demo5").innerHTML =search;
+
+</script>
+
+</body>
+</html>
+
