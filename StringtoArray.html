@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click "Try it" to display the first array element, after a string split.</p>
+<p> print the first element ,which will be the first character of string at arr[0]</p>
+<button onclick="myFunction()">print</button>
+
+
+<p id="demo"></p>
+<p>printing the whole string using  for loop </p>
+<p id="str"></p>
+<p> print the first element ,which will be the string at arr[0]</p>
+
+<button onclick="myFunctionArray()">Try it</button>
+
+<p id="demo2"></p>
+<script>
+function myFunction() {
+  var str = "a,b,c,d,e,f";
+  var arr = str.split("");
+  document.getElementById("demo").innerHTML = arr[0];
+  var stri="";
+  var text="";
+ 
+  for(var i = 0; i < arr.length ; i++)
+ {
+ stri = stri+arr[i]; 
+ }
+  document.getElementById("str").innerHTML =stri;
+  
+  
+}
+
+
+
+
+
+function myFunctionArray() {
+  var str = "a,b,c,d,e,f";
+  var arr = str.split(" ");
+  document.getElementById("demo2").innerHTML = arr[0];
+  
+}
+</script>
+
+</body>
+</html>
+
+
